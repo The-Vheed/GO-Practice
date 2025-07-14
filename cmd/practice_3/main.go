@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	fmt.Println("A simple program to demonstrate arrays, slices and maps in Go")
 
-	var arr [3]int32 = [...]int32{10, 20, 30}
+	var arr [3]int32 = [...]int32{10, 20, 30} // Create an array of int32 with 3 elements and initialize it with "..." being autosized
 
 	fmt.Println("Array initialized with values:", arr)
 	fmt.Println("Array elements and contiguous memory:")
@@ -15,7 +15,7 @@ func main() {
 	fmt.Println("Array length:", len(arr))
 
 	// Omit the size of the array to create a slice
-	var slice []int32 = []int32{40, 50, 60} // Slice from index 1 to 2 (exclusive of 3)
+	var slice []int32 = []int32{40, 50, 60}
 	fmt.Printf("Slice created from the array: %v\nLength is %v with capacity %v\n", slice, len(slice), cap(slice))
 	// Note: The capacity of a slice is the maximum number of elements it can hold without reallocating memory
 	// Use make(int32[], 3, 5) to create a slice with a specific length 3 and capacity 5
